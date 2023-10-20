@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+/*imagem de fundo */
+.posicaofundo{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.posicaofundo .ImagemDefundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px) brightness(40%);
+   
+}
+
+.posicaofundo::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+}
+
+.posicaoheadernav{
+    height: 100vh;
+}
+
+/*Titulo do jogo */
+.Titulodojogo{
+    width: 40%;
+    padding-left: 60px;
+}
+
+.posicaotituloegit{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2370px;
+}
+/* Github*/
+#b{
+    font-size: 40pt;
+    width: 150px;
+    color: #FFF;
+    transition: all .55s ease;
+}
+#b:hover{
+    color: rgb(121, 121, 121);
+    transition: all .55s ease;
+}
+
+.gitLogo:hover{
+    color: rgb(121, 121, 121);
+    transition: all .55s ease;
+}
+
+
+/* Texto */
+.posicaotextoedownload{
+    padding-left: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.posicaohistoria{
+    width: 100%;
+    max-width: 570px;
+}
+
+.texto{
+    margin: 20px 0 20px;
+    padding: 15px;
+    color: #FFF;
+    font-size: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} 
+/* Download*/
+.baixar{
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    background: #5e43ab;
+    border: 3px solid rgba(0, 0, 0, 0.215);
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14p;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+    font-family: Helvetica;
+    font-weight: bolder;
+    
+}
+
+.baixar:hover{
+    background-color: #443279;
+    color: #FFF;
+}
+
+/* slider  */
+
+.d-block{
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+
+/* Responsivo*/
+/* Responsibilidade para monitores acima de 1650px para melhor aproveitamento do slider*/
+  @media screen and (min-width: 1650px){
+    .d-block{
+        padding-left: 90px;
+        padding-right: 90px;
+        border-radius: 150px;
+        padding-top: 40px;
+    }
+    
+  }
+
+  /* Responsibilidade para celulares*/
+@media  screen and (max-width: 730px) {
+    .Titulodojogo{
+        width: 80%;
+    }
+    #b{
+        width: 100px;
+    }
+    .posicaotextoedownload{
+        padding-left: 0;
+        margin-left: 20px;
+    }
+    
+    .d-block{
+        object-fit: cover;
+        height: 50vh; /*100vh */
+        width: 100%;
+        
+    }
+}
+/* Responsibilidade do slider para celulares de 500px abaixo de largura*/
+@media  screen and (max-width: 500px){
+    #carouselExampleDark{
+        width: 55vh;
+    }
+}
+/*padding do lado em telas medias */
+@media  screen and (min-width: 730px) and (max-width: 1650px){
+    .d-block{
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 100px;
+    }
+}
+/* tela achatada sem este*/
+@media  screen and (min-width: 730px) and (max-width: 930px){
+    .d-block{
+        height: 80vh;
+        
+    }
+   
+}
+
